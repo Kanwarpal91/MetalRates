@@ -4,11 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gold Rate Today in India | 24K, 22K, 18K, Silver &amp; Platinum Price, Alerts &amp; Calculators</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3458536266912076"
-     crossorigin="anonymous"></script>
-     <meta name="google-adsense-account" content="ca-pub-3458536266912076">
 <meta name="description" content="Gold, silver and platinum rate today in India with city-wise prices, 1g/8g/10g/100g tables, calculators and price alerts, based on today's published rates.">
 <meta name="theme-color" content="#0f2a5c">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta property="og:title" content="Gold, Silver &amp; Platinum Rates Today in India"><meta property="og:description" content="City-wise rates, jewellery bill and gold loan calculators, price alerts and more."><meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 /* ===== Theme tokens: light default, dark via OS setting or the toggle button ===== */
@@ -57,6 +56,15 @@ header nav a.cur{border-bottom:2px solid var(--or)}
 .tki{white-space:nowrap;margin-right:2.5rem;color:#dbeafe}.tki b{color:#fff}
 @keyframes mq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track{animation:none!important}.tkv{overflow-x:auto}}
+
+/* ===== Pro look & feel ===== */
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 12px;border-radius:8px;z-index:100}.skip:focus{left:8px}
+.hero{position:relative;overflow:hidden}.hero::before{content:'';position:absolute;right:-60px;top:-70px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fde68a,#f59e0b 55%,transparent 70%);opacity:.35}
+.shimmer{background:linear-gradient(90deg,#fff,#fde68a,#fff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}@keyframes sh{to{background-position:-200% 0}}
+.box{backdrop-filter:blur(6px)}.box:hover{transform:translateY(-1px)}
+#mini{position:fixed;top:0;left:0;right:0;z-index:40;transform:translateY(-100%);visibility:hidden;transition:transform .3s,visibility .3s;background:var(--navy);color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.3)}#mini.show{transform:none;visibility:visible}
+.row2{display:flex;justify-content:space-between;gap:12px}.big2{font-size:22px;font-weight:800;color:var(--hd)}
+@media print{body *{visibility:hidden}#jb-card,#jb-card *{visibility:visible}#jb-card{position:absolute;left:0;top:0;width:100%;box-shadow:none;border:0}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Why do gold rates differ between cities?","acceptedAnswer":{"@type":"Answer","text":"Local taxes, transport costs, demand and jeweller margins create small differences between cities."}},
@@ -64,6 +72,8 @@ header nav a.cur{border-bottom:2px solid var(--or)}
 {"@type":"Question","name":"Is GST charged on gold?","acceptedAnswer":{"@type":"Answer","text":"GST of 3% applies on gold value, and making charges attract GST as well."}}]}</script>
 </head>
 <body>
+<a class="skip" href="#pg-home">Skip to content</a>
+<div id="mini"><div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between gap-3 text-sm"><span id="mini-t"></span><button id="mini-top" class="tab" style="padding:4px 12px">↑ Top</button></div></div>
 <!-- ===== Header ===== -->
 <header style="background:var(--navy);color:#fff">
   <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
@@ -74,14 +84,14 @@ header nav a.cur{border-bottom:2px solid var(--or)}
 </header>
 
 <main id="pg-home" class="max-w-6xl mx-auto px-4 py-6 grid gap-6">
-  <nav class="flex gap-2 overflow-x-auto pb-1 text-sm" aria-label="On this page"><a href="#rates" class="tab">Rates</a><a href="#cities" class="tab">Cities</a><a href="#history" class="tab">History</a><a href="#alerts" class="tab">Alerts</a><a href="#tools" class="tab">Planner</a><a href="#calc" class="tab">Calculator</a><a href="#faq" class="tab">FAQ</a></nav>
+  <nav class="flex gap-2 overflow-x-auto pb-1 text-sm" aria-label="On this page"><a href="#rates" class="tab">Rates</a><a href="#cities" class="tab">Cities</a><a href="#history" class="tab">History</a><a href="#compare" class="tab">Compare</a><a href="#alerts" class="tab">Alerts</a><a href="#bill" class="tab">Bill</a><a href="#loan" class="tab">Loan</a><a href="#global" class="tab">Global</a><a href="#learn" class="tab">Learn</a><a href="#tools" class="tab">Planner</a><a href="#calc" class="tab">Calculator</a><a href="#faq" class="tab">FAQ</a></nav>
   <!-- Title + controls -->
   <section>
-    <div class="hero rounded-2xl p-5"><h1 id="h1" class="text-2xl sm:text-4xl font-bold"></h1><p class="text-sm mt-1 opacity-80">Today's published rates, city-wise prices, price alerts, savings planner and calculators in one place.</p></div>
+    <div class="hero rounded-2xl p-5"><h1 id="h1" class="shimmer text-2xl sm:text-4xl font-bold"></h1><p class="text-sm mt-1 opacity-80">Today's published rates, city-wise prices, price alerts, savings planner and calculators in one place.</p></div>
     <p class="text-sm mt-1" style="color:var(--mut)"><span id="st" class="live"></span> <span id="upd"></span></p>
     <div class="mt-4 flex flex-wrap gap-3 items-end">
       <div id="mt" class="flex gap-2"></div>
-      <label class="lb">City<select id="cs" class="fi" style="width:auto;min-width:160px"></select></label><button id="shr" class="tab">Share rate</button>
+      <label class="lb">City<select id="cs" class="fi" style="width:auto;min-width:160px"></select></label><button id="shr" class="tab">Share rate</button><button id="rc" class="tab">Rate card (PNG)</button>
     </div>
   </section>
 
@@ -147,6 +157,48 @@ header nav a.cur{border-bottom:2px solid var(--or)}
       <div class="rounded-xl p-5" style="background:var(--res)"><div class="lb">Estimated value</div><div id="kv" class="text-4xl font-bold" style="color:var(--hd)">—</div><div id="kd" class="mt-3 grid gap-1 text-sm" style="color:var(--tx)"></div></div>
     </div>
   </section>
+
+  <!-- Compare cities -->
+  <section id="compare" class="box"><div class="hd">Compare cities</div><div class="p-4 grid gap-3">
+    <div class="grid grid-cols-3 gap-3"><label class="lb">City 1<select id="c1" class="fi"></select></label><label class="lb">City 2<select id="c2" class="fi"></select></label><label class="lb">City 3<select id="c3" class="fi"></select></label></div>
+    <div class="scroll"><table><thead id="cmph"></thead><tbody id="cmpb"></tbody></table></div>
+    <p class="text-xs" style="color:var(--mut)">City differences are approximate. The lowest price in each row is shown in green.</p></div></section>
+
+  <!-- Jewellery bill + sell value -->
+  <section id="bill" class="grid md:grid-cols-2 gap-6">
+    <div class="box"><div class="hd">Jewellery bill estimator</div><div class="p-4 grid grid-cols-2 gap-3">
+      <label class="lb">Metal<select id="jb-m" class="fi"><option value="gold">Gold</option><option value="silver">Silver</option><option value="platinum">Platinum</option></select></label><label class="lb">Purity<select id="jb-p" class="fi"></select></label><label class="lb">Weight (grams)<input id="jb-w" type="number" value="10" min="0" step="any" class="fi"></label>
+      <label class="lb">Making charge type<select id="jb-mt" class="fi"><option value="%">% of metal value</option><option value="g">₹ per gram</option></select></label>
+      <label class="lb">Making charge<input id="jb-mv" type="number" value="10" min="0" step="any" class="fi"></label><label class="lb">Wastage %<input id="jb-wp" type="number" value="0" min="0" step="any" class="fi"></label>
+      <label class="lb">Stones / other (₹)<input id="jb-st" type="number" value="0" min="0" step="any" class="fi"></label><label class="lb flex items-end gap-2 pb-2"><input id="jb-g" type="checkbox" checked class="w-5 h-5"> Add 3% GST</label>
+      <div id="jb-card" class="col-span-2 rounded-xl p-4 text-sm grid gap-1" style="background:var(--res)"><div id="jb-out" class="grid gap-1"></div></div>
+      <button id="jb-print" class="tab col-span-2">Print / save as PDF</button></div></div>
+    <div class="box"><div class="hd">Sell or exchange value</div><div class="p-4 grid grid-cols-2 gap-3">
+      <label class="lb">Metal<select id="sv-m" class="fi"><option value="gold">Gold</option><option value="silver">Silver</option><option value="platinum">Platinum</option></select></label><label class="lb">Purity<select id="sv-p" class="fi"></select></label><label class="lb">Weight (grams)<input id="sv-w" type="number" value="10" min="0" step="any" class="fi"></label><label class="lb">Jeweller deduction %<input id="sv-d" type="number" value="5" min="0" step="any" class="fi"></label>
+      <div id="sv-out" class="col-span-2 rounded-xl p-4 text-sm grid gap-1" style="background:var(--res)"></div>
+      <p class="col-span-2 text-xs" style="color:var(--mut)">The deduction varies by jeweller. 5% is only a starting example, so enter what your jeweller offers.</p></div></div>
+  </section>
+
+  <!-- Gold loan -->
+  <section id="loan" class="box"><div class="hd">Gold loan calculator</div><div class="p-4 grid md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 gap-3 content-start"><label class="lb">Gold weight (grams)<input id="gl-w" type="number" value="50" min="0" step="any" class="fi"></label><label class="lb">Purity<select id="gl-p" class="fi"></select></label>
+      <label class="lb">Loan-to-value % (LTV)<input id="gl-l" type="number" value="75" min="0" max="100" step="any" class="fi"></label><label class="lb">Interest % per year<input id="gl-r" type="number" value="12" min="0" step="any" class="fi"></label>
+      <label class="lb">Tenure (months)<input id="gl-n" type="number" value="12" min="1" step="1" class="fi"></label><label class="lb">Loan amount (₹, blank = maximum)<input id="gl-a" type="number" value="" min="0" step="any" class="fi"></label></div>
+    <div><div id="gl-out" class="rounded-xl p-4 text-sm grid gap-1" style="background:var(--res)"></div>
+    <p class="text-xs mt-2" style="color:var(--mut)">LTV and interest differ by lender and loan size, and RBI sets limits. The values above are editable examples, so use your lender's terms. EMI assumes equal monthly instalments.</p></div></div></section>
+
+  <!-- Global prices -->
+  <section id="global" class="box"><div class="hd"><span>Global prices</span><label class="lb" style="display:flex;gap:8px;align-items:center">Currency<select id="gc-c" class="fi" style="margin:0;width:auto"><option>USD</option><option>INR</option><option>AED</option><option>EUR</option><option>GBP</option><option>SGD</option></select></label></div>
+    <div class="scroll"><table id="gc-t"></table></div><p class="text-xs p-4" style="color:var(--mut)">International spot prices converted at the current exchange rate. They exclude Indian duty, GST and premiums.</p></section>
+
+  <!-- Learn -->
+  <section id="learn" class="grid md:grid-cols-2 gap-6">
+    <div class="box"><div class="hd">Gold purity guide</div><div class="scroll"><table><thead><tr><th>Karat</th><th>Fineness</th><th>Gold %</th><th>Common use</th></tr></thead><tbody>
+      <tr><td>24K</td><td>999</td><td>99.9%</td><td>Coins, bars</td></tr><tr><td>22K</td><td>916</td><td>91.6%</td><td>Jewellery</td></tr><tr><td>18K</td><td>750</td><td>75%</td><td>Studded jewellery</td></tr><tr><td>14K</td><td>585</td><td>58.5%</td><td>Light jewellery</td></tr></tbody></table></div>
+      <p class="text-sm p-4" style="color:var(--mut)">In India, hallmarked gold jewellery carries the BIS mark, the purity, and a 6-character HUID code. Silver is commonly sold as 999 (fine) or 925 (sterling), and platinum as 950.</p></div>
+    <div class="box"><div class="hd">Before you buy: checklist</div><div id="chk" class="p-4 grid gap-2 text-sm"></div></div>
+  </section>
+
   <section id="faq" class="box"><div class="hd">Frequently asked questions</div>
     <details><summary>Why do gold rates differ between cities?</summary><p>Local taxes, transport costs, demand and jeweller margins create small differences from one city to another.</p></details>
     <details><summary>What is the difference between 24K and 22K gold?</summary><p>24K is about 99.9% pure gold. 22K is about 91.6% gold mixed with other metals for strength, so it is used for jewellery.</p></details>
@@ -158,7 +210,7 @@ header nav a.cur{border-bottom:2px solid var(--or)}
 <p>MetalRates.in is a free tool that helps people in India check gold, silver and platinum rates quickly, compare cities, and estimate what their jewellery or bullion is worth.</p>
 <h2>What you can do here</h2><ul><li>See 24K, 22K and 18K gold, silver and platinum rates for 19 cities.</li><li>Check rates for 1 g, 8 g, 10 g, 100 g and 1 kg, with the change since yesterday.</li><li>Use calculators for metal value, making charges, GST and monthly savings plans.</li><li>Set price alerts and view price trends.</li></ul>
 <h2>How our rates are calculated</h2>
-<p>We publish daily Indian retail reference rates for gold, silver and platinum, and show the date they were last updated at the top of the page. International spot prices and the USD to INR rate are shown for reference when available. City-wise differences are approximate. If the rates are more than a day old, the page says so clearly. Platinum has no widely published Indian benchmark, so its rate is an estimate from the international price.</p>
+<p>We start from daily Indian retail reference rates for gold, silver and platinum. When international spot prices and the USD to INR rate can be loaded, the page adjusts those reference rates for spot movements, about once a minute, and marks the badge LIVE. The adjustment uses a premium calibrated against the published rates. If live data can't be loaded, the page shows the last published rates with their date, and says so clearly when they are more than a day old. City-wise differences are approximate. Platinum has no widely published Indian benchmark, so its rate is an estimate.</p>
 <div class="note">Indian retail rates also include import duty, GST, making charges and local jeweller margins, so the price you pay can differ from the rate shown. Always confirm with your jeweller or dealer. See our <a href="#/disclaimer">Disclaimer</a>.</div>
 <h2>Our principles</h2><ul><li><b>Clarity:</b> we label estimates, simulated data and illustrative charts as such.</li><li><b>Independence:</b> advertising or partnerships, if any, never change the rates we show.</li><li><b>Privacy:</b> your alerts and settings stay in your own browser. Read our <a href="#/privacy">Privacy Policy</a>.</li><li><b>Corrections:</b> if you spot a mistake, <a href="#/contact">tell us</a> and we will review it.</li></ul>
 <h2>Who runs this site</h2><p>MetalRates.in is run by [your name or company]. Replace this line with a short introduction about you or your team, and your location if you wish. A real, transparent "About" section builds trust with visitors.</p>
@@ -204,6 +256,12 @@ header nav a.cur{border-bottom:2px solid var(--or)}
 <h2>8. No warranty and limitation of liability</h2><p>The website is provided "as is", without warranties of any kind. To the fullest extent permitted by law, we are not liable for any loss or damage, direct or indirect, arising from your use of, or reliance on, this website.</p>
 <h2>9. Changes</h2><p>We may change this disclaimer and the website at any time without notice. Please check this page regularly.</p>
 <h2>10. Contact</h2><p>If you find an error or have a question, please <a href="#/contact">contact us</a>. See also our <a href="#/privacy">Privacy Policy</a>.</p></article></main>
+<main id="pg-calibrate" class="max-w-3xl mx-auto px-4 py-8" hidden><article class="box p-6 prose"><h1>Calibrate live rates (owner tool)</h1>
+<p>Do this once, at a time when the <b>published Indian rates in rates.json are current</b> (for example right after you copy today's rates from a rate site). It compares them with live international prices and prints a <b>premium</b> for each metal. Paste it into rates.json to switch on LIVE mode.</p>
+<p><button id="cal-go" class="tab on">Fetch live prices &amp; calculate</button></p>
+<div class="scroll"><table id="cal-tbl"></table></div>
+<pre id="cal-out" class="note" style="white-space:pre-wrap;user-select:all"></pre>
+<p class="meta">Only keep the platinum line if your platinum number is a real published Indian rate; otherwise delete it and platinum stays an estimate. Repeat every few weeks, or whenever import duty changes.</p></article></main>
 <div id="toast" role="status" aria-live="polite"></div>
 
 <footer class="py-8 text-sm" style="background:var(--card);border-top:1px solid var(--bd);color:var(--mut)">
@@ -221,12 +279,12 @@ const $=i=>document.getElementById(i);
 const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN'),inr2=n=>'₹'+n.toLocaleString('en-IN',{maximumFractionDigits:2});
 /* Today's published Indian rates, INR per gram of pure metal. The page first loads rates.json (update it daily);
    these built-in values are only a fallback. Platinum has no Indian benchmark, so it is an estimate. */
-const DEFAULT_RATES={date:'2026-10-11',source:'Published Indian retail rate tables (11 Oct 2026)',gold:15142,silver:240,platinum:5573,prev:{gold:15142,silver:240,platinum:5573},history:[]};
+const DEFAULT_RATES={date:'2026-10-13',source:'Published Indian retail rate tables (13 Oct 2026)',gold:14967,silver:239.9,platinum:5163,prev:{gold:14968,silver:239.9,platinum:5163},history:[{date:'2026-10-11',gold:15142,silver:240},{date:'2026-10-12',gold:14968}],premium:{},premiumDate:null};
 const SYM={gold:'XAU',silver:'XAG',platinum:'XPT'},K=['gold','silver','platinum'],NAME={gold:'Gold',silver:'Silver',platinum:'Platinum'};
-// City multipliers [gold, silver, platinum] vs the all-India rate. Approximate: gold differs by under 0.1%, southern silver is typically a few % higher.
-const CITY={Delhi:[1.001,1,1],Mumbai:[1,1,1],Chennai:[1,1.05,1],Kolkata:[1,1,1],Agra:[1,1,1],Bangalore:[1,1,1],Hyderabad:[1,1.05,1],Pune:[1,1,1],Ahmedabad:[1.0003,1,1],Jaipur:[1,1,1],Lucknow:[1,1,1],Chandigarh:[1,1,1],Kochi:[1,1.05,1],Patna:[1,1,1],Bhopal:[1,1,1],Surat:[1.0003,1,1],Nagpur:[1,1,1],Indore:[1,1,1],Coimbatore:[1,1.05,1]};
+// City multipliers [gold, silver, platinum] vs the all-India rate. Approximate: gold differs by under 0.1%, southern silver is roughly 2% higher in one 13 Oct listing.
+const CITY={Delhi:[1.001,1,1],Mumbai:[1,1,1],Chennai:[1,1.02,1],Kolkata:[1,1,1],Agra:[1,1,1],Bangalore:[1,1,1],Hyderabad:[1,1.02,1],Pune:[1,1,1],Ahmedabad:[1.0003,1,1],Jaipur:[1,1,1],Lucknow:[1,1,1],Chandigarh:[1,1,1],Kochi:[1,1.02,1],Patna:[1,1,1],Bhopal:[1,1,1],Surat:[1.0003,1,1],Nagpur:[1,1,1],Indore:[1,1,1],Coimbatore:[1,1.02,1]};
 const COLS={gold:[['24K / 10g',1,10],['22K / 10g',22/24,10],['18K / 10g',.75,10]],silver:[['1 gram',1,1],['10 gram',1,10],['1 kg',1,1000]],platinum:[['1 gram (950)',.95,1],['10 gram (950)',.95,10],['100 gram',.95,100]]};
-const SPOT={},lastP={};let USDINR=0;
+const SPOT={},lastP={};let USDINR=0,FXR={};
 const PUR={gold:[['24K',1],['22K',22/24],['18K',.75],['14K',.585]],silver:[['999',1],['925',.925/.999]],platinum:[['950',.95],['999',1]]};
 let city='Delhi',mt='gold',gp=0,days=7,fresh=false,stamp=new Date(),DATA=DEFAULT_RATES;
 const S={};K.forEach(k=>S[k]={p:DEFAULT_RATES[k],open:DEFAULT_RATES.prev[k]});
@@ -238,26 +296,45 @@ const pct=k=>(S[k].p/S[k].open-1)*100,pc=c=>`<span class="${c>=0?'up':'dn'}">${c
 /* ===== Load today's rates: rates.json (daily update) with a built-in fallback; international spot is shown for reference ===== */
 const asOf=()=>new Date(DATA.date+'T00:00:00+05:30').toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric',timeZone:'Asia/Kolkata'});
 const ageDays=()=>Math.floor((Date.now()-new Date(DATA.date+'T00:00:00+05:30'))/864e5);
-async function loadRates(){
+let live=false,lastFx=0;
+async function loadStatic(){
   try{const r=await fetch('rates.json?'+Date.now(),{cache:'no-store'});if(r.ok){const j=await r.json();if(j.date&&j.prev&&K.every(k=>j[k]>0&&j.prev[k]>0))DATA=j}}catch(e){}
-  K.forEach(k=>{S[k].p=DATA[k];S[k].open=DATA.prev[k]});stamp=new Date();fresh=ageDays()<=1;render();
-  try{const [fx,...m]=await Promise.all([fetch('https://open.er-api.com/v6/latest/USD').then(r=>r.json()),...K.map(k=>fetch('https://api.gold-api.com/price/'+SYM[k]).then(r=>r.json()))]);
-    if(fx.rates&&fx.rates.INR&&m.every(x=>x.price)){USDINR=fx.rates.INR;K.forEach((k,i)=>SPOT[k]=m[i].price);render()}}catch(e){}
+  K.forEach(k=>{if(!isLive(k))S[k].p=DATA[k];S[k].open=DATA.prev[k]});fresh=ageDays()<=1;stamp=new Date();render();
 }
-
+// A metal goes LIVE when rates.json holds its calibrated "premium" and the international feeds answer.
+const isLive=k=>live&&DATA.premium&&DATA.premium[k]>0&&SPOT[k]>0&&USDINR>0;
+async function getSpot(){
+  const fx=await fetch('https://open.er-api.com/v6/latest/USD').then(r=>r.json()),m=await Promise.all(K.map(k=>fetch('https://api.gold-api.com/price/'+SYM[k]).then(r=>r.json())));
+  if(!(fx.rates&&fx.rates.INR>0)||!m.every(x=>x.price>0))throw 0;
+  USDINR=fx.rates.INR;FXR=fx.rates;K.forEach((k,i)=>SPOT[k]=m[i].price);
+}
+async function liveTick(){
+  try{await getSpot();live=true;const pr=DATA.premium||{};
+    K.forEach(k=>{if(pr[k]>0)S[k].p=SPOT[k]*USDINR/31.1035*pr[k]});stamp=new Date()}catch(e){live=K.some(isLive)&&live}
+  render();
+}
+/* Owner tool (#/calibrate): compares today's published Indian rates with live spot and prints the "premium" to paste into rates.json */
+async function calibrate(){
+  const o=$('cal-out');o.textContent='Fetching live prices...';
+  try{await getSpot();const rows=K.map(k=>{const pub=DATA[k],raw=SPOT[k]*USDINR/31.1035,p=pub/raw;return {k,pub,spot:SPOT[k],raw,p}});
+    const ist=new Date(Date.now()+19800000).toISOString().slice(0,10);
+    $('cal-tbl').innerHTML='<tr><th>Metal</th><th>Published ₹/g</th><th>Spot $/oz</th><th>Spot in ₹/g</th><th>Premium</th></tr>'+rows.map(r=>`<tr><td>${NAME[r.k]}</td><td>${r.pub}</td><td>${r.spot.toFixed(2)}</td><td>${r.raw.toFixed(2)}</td><td><b>${r.p.toFixed(4)}</b> ${r.p<.97||r.p>1.3?'⚠️ unusual':''}</td></tr>`).join('');
+    o.textContent=JSON.stringify({premium:Object.fromEntries(rows.map(r=>[r.k,+r.p.toFixed(4)])),premiumDate:ist},null,2)+'\n\nUSD/INR used: '+USDINR.toFixed(2)}
+  catch(e){o.textContent='Could not reach the price feeds. Try again from the hosted site.'}
+}
 /* ===== Render ===== */
 function render(){
   const unit={gold:10,silver:1000,platinum:10},ul={gold:'10g',silver:'1kg',platinum:'10g'},pf={gold:1,silver:1,platinum:.95};
-  $('st').className='live'+(fresh?'':' sim');$('st').innerHTML='<i></i>'+(fresh?"Today's rates · as of "+asOf():'Last updated '+asOf()+' · may be out of date');
-  $('upd').textContent='Source: '+DATA.source+'. Page refreshed '+stamp.toLocaleTimeString('en-IN')+'.';
+  $('st').className='live'+(live||fresh?'':' sim');$('st').innerHTML='<i></i>'+(K.some(isLive)?'LIVE · spot-linked · '+stamp.toLocaleTimeString('en-IN'):fresh?"Today's rates · as of "+asOf():'Last updated '+asOf()+' · may be out of date');
+  $('upd').textContent='Source: '+DATA.source+(K.some(isLive)?', adjusted live for international price moves.':'.');
   {const it=[['Gold 24K /10g',rate('gold')*10,'gold'],['Gold 22K /10g',rate('gold',22/24)*10,'gold'],['Gold 18K /10g',rate('gold',.75)*10,'gold'],['Silver /1kg',rate('silver')*1000,'silver'],['Platinum /10g',rate('platinum',.95)*10,'platinum']];
-  const h=it.map(([n,v,k])=>`<span class="tki">${n} <b>${inr(v)}</b> <span class="${pct(k)>=0?'up':'dn'}" style="filter:brightness(1.5)">${pct(k)>=0?'▲':'▼'} ${Math.abs(pct(k)).toFixed(2)}%</span></span>`).join('')+`<span class="tki">${city} · rates as of ${asOf()}</span>`;
-  $('tk').innerHTML=h+h;$('tkp').className='tkp'+(fresh?'':' sim');$('tkp').innerHTML='<i></i>'+(fresh?"TODAY'S RATES":'OLD RATES')}
+  const h=it.map(([n,v,k])=>`<span class="tki">${n} <b>${inr(v)}</b> <span class="${pct(k)>=0?'up':'dn'}" style="filter:brightness(1.5)">${pct(k)>=0?'▲':'▼'} ${Math.abs(pct(k)).toFixed(2)}%</span></span>`).join('')+`<span class="tki">${city} · ${K.some(isLive)?'live '+stamp.toLocaleTimeString('en-IN'):'rates as of '+asOf()}</span>`;
+  $('tk').innerHTML=h+h;$('tkp').className='tkp'+(live||fresh?'':' sim');$('tkp').innerHTML='<i></i>'+(K.some(isLive)?'LIVE':fresh?"TODAY'S RATES":'OLD RATES')}
   $('h1').textContent=`${NAME[mt]} Rate Today in ${city}`;
   $('mt').innerHTML=K.map(k=>`<button class="tab ${k==mt?'on':''}" data-m="${k}">${NAME[k]}</button>`).join('');
   const f=PUR[mt][gp][1],u=unit[mt]*pf[mt]*(mt=='platinum'?1/pf[mt]*1:1);
   const u1=mt=='platinum'?10:unit[mt];
-  $('big').innerHTML=[[`${mt=='gold'?PUR.gold[gp][0]+' ':''}${NAME[mt]} / ${ul[mt]}`,rate(mt,f)*u1,rate(mt,f)*u1-prev(mt,f)*u1],['Per gram',rate(mt,f),rate(mt,f)-prev(mt,f)],['Rates as of',asOf(),null]].map(([l,v,d])=>`<div><div class="lb">${l}</div><div class="text-2xl font-bold" style="color:var(--hd)">${typeof v=='number'?(v<1000&&mt=='silver'?inr2(v):inr(v)):v}</div><div class="text-sm">${d===null?'':arrow(d)+' '+pc(pct(mt))}</div></div>`).join('');
+  $('big').innerHTML=[[`${mt=='gold'?PUR.gold[gp][0]+' ':''}${NAME[mt]} / ${ul[mt]}`,rate(mt,f)*u1,rate(mt,f)*u1-prev(mt,f)*u1],['Per gram',rate(mt,f),rate(mt,f)-prev(mt,f)],[isLive(mt)?'Live update':'Rates as of',isLive(mt)?stamp.toLocaleTimeString('en-IN'):asOf(),null]].map(([l,v,d])=>`<div><div class="lb">${l}</div><div class="text-2xl font-bold" style="color:var(--hd)">${typeof v=='number'?(v<1000&&mt=='silver'?inr2(v):inr(v)):v}</div><div class="text-sm">${d===null?'':arrow(d)+' '+pc(pct(mt))}</div></div>`).join('');
   {const el=$('big'),lp=lastP[mt];el.classList.remove('fu','fd');void el.offsetWidth;if(lp&&S[mt].p>lp)el.classList.add('fu');else if(lp&&S[mt].p<lp)el.classList.add('fd');lastP[mt]=S[mt].p}
   $('qh').textContent=`${mt=='gold'?PUR.gold[gp][0]+' ':''}${NAME[mt]} rate in ${city} today`;
   $('pt').innerHTML=mt=='gold'?PUR.gold.slice(0,3).map(([n],i)=>`<button class="tab ${i==gp?'on':''}" data-p="${i}">${n}</button>`).join(''):'';
@@ -270,7 +347,7 @@ function render(){
   const cols=COLS[mt];
   $('cth').innerHTML='<tr><th>City</th>'+cols.map(c=>`<th>${c[0]}</th>`).join('')+'</tr>';
   $('ctb').innerHTML=Object.keys(CITY).filter(c=>c.toLowerCase().includes($('cq').value.toLowerCase())).map(c=>{const m=CITY[c][K.indexOf(mt)];return `<tr style="${c==city?'background:var(--hl)':''}"><td><b>${c}</b></td>`+cols.map(([,fa,n])=>`<td>${inr(S[mt].p*m*fa*n)} ${arrow(S[mt].p*m*fa*n-S[mt].open*m*fa*n)}</td>`).join('')+'</tr>'}).join('');
-  history();calc();checkAL();almsg();
+  history();calc();checkAL();almsg();if(window.initDone)pro();
 }
 /* ===== History: only real daily rates from rates.json (history array + today) ===== */
 function history(){
@@ -285,7 +362,7 @@ function history(){
   const c=(l,b,t)=>`<div class="box p-4"><div class="lb">${l}</div><div class="text-xl font-bold" style="color:var(--hd)">${b}</div><div class="text-xs mt-1" style="color:var(--mut)">${t}</div></div>`;
   $('stats').innerHTML=c('Gold–Silver ratio',(rate('gold')/rate('silver')).toFixed(1),'grams of silver that equal 1 gram of gold in value')
    +c(NAME[mt]+' international spot',SPOT[mt]?'$'+SPOT[mt].toLocaleString('en-US',{maximumFractionDigits:2})+' /oz':'Not available',USDINR?'USD/INR '+USDINR.toFixed(2)+' · for reference':'Spot feed not reachable right now')
-   +c('Rate source',asOf(),DATA.source+(mt=='platinum'?'. Platinum is an estimate.':''));
+   +c('Rate source',asOf(),DATA.source+(isLive(mt)?' · live-adjusted (calibrated '+DATA.premiumDate+')':'')+(mt=='platinum'?'. Platinum is an estimate.':''));
 }
 /* ===== Calculator ===== */
 function purOpts(){$('kp').innerHTML=PUR[$('km').value].map(([n,f])=>`<option value="${f}" ${n=='22K'?'selected':''}>${n}</option>`).join('')}
@@ -322,6 +399,45 @@ const WU={'gram':1,'milligram':.001,'kilogram':1000,'tola (11.66 g)':11.6638,'so
 $('cvf').innerHTML=$('cvt').innerHTML=Object.keys(WU).map(u=>`<option>${u}</option>`).join('');$('cvt').value='tola (11.66 g)';
 function cvt(){$('cvr').textContent=((+$('cvv').value||0)*WU[$('cvf').value]/WU[$('cvt').value]).toLocaleString('en-IN',{maximumFractionDigits:5})+' '+$('cvt').value.split(' (')[0]}
 ['cvv','cvf','cvt'].forEach(i=>$(i).addEventListener('input',cvt));
+
+/* ===== PRO FEATURES ===== */
+const fillPur=(sel,metal,def)=>{$(sel).innerHTML=PUR[metal].map(([n,f])=>`<option value="${f}" ${n==def?'selected':''}>${n}</option>`).join('')};
+const lrow=(a,b,bold)=>`<div class="row2 ${bold?'big2':''}"><span>${a}</span><b>${b}</b></div>`;
+function cmp(){const cs=['c1','c2','c3'].map(i=>$(i).value),rows=[['Gold 24K / 10g','gold',1,10],['Gold 22K / 10g','gold',22/24,10],['Silver / 1 kg','silver',1,1000],['Platinum 950 / 10g','platinum',.95,10]];
+  $('cmph').innerHTML='<tr><th>Item</th>'+cs.map(c=>`<th>${c}</th>`).join('')+'</tr>';
+  $('cmpb').innerHTML=rows.map(([l,k,f,n])=>{const v=cs.map(c=>S[k].p*CITY[c][K.indexOf(k)]*f*n),mn=Math.min(...v),diff=new Set(v.map(Math.round)).size>1;return `<tr><td>${l}</td>`+v.map(x=>`<td class="${diff&&x===mn?'up':''}">${inr(x)}</td>`).join('')+'</tr>'}).join('')}
+function bill(){const m=$('jb-m').value,f=+$('jb-p').value,g=+$('jb-w').value||0,mv=+$('jb-mv').value||0,wp=+$('jb-wp').value||0,st=+$('jb-st').value||0,r=rate(m,f);
+  const metal=g*r,waste=metal*wp/100,mk=$('jb-mt').value=='%'?(metal+waste)*mv/100:g*mv,sub=metal+waste+mk+st,gst=$('jb-g').checked?sub*.03:0;
+  $('jb-out').innerHTML=`<div class="font-semibold">${NAME[m]} jewellery estimate · ${city} · ${asOf()}</div>`+lrow(`${g} g × ${inr2(r)}/g`,inr(metal))+lrow(`Wastage (${wp}%)`,inr(waste))+lrow('Making charges',inr(mk))+lrow('Stones / other',inr(st))+lrow('Subtotal',inr(sub))+lrow('GST 3%',inr(gst))+'<hr style="border-color:var(--bd);margin:6px 0">'+lrow('Estimated total',inr(sub+gst),1)+'<p class="text-xs" style="color:var(--mut)">Estimate only. Your jeweller\'s bill may differ.</p>'}
+function sell(){const m=$('sv-m').value,g=+$('sv-w').value||0,d=+$('sv-d').value||0,v=g*rate(m,+$('sv-p').value);
+  $('sv-out').innerHTML=lrow('Metal value today',inr(v))+lrow(`Deduction (${d}%)`,'− '+inr(v*d/100))+'<hr style="border-color:var(--bd);margin:6px 0">'+lrow('You may receive',inr(v*(1-d/100)),1)}
+function loan(){const g=+$('gl-w').value||0,ltv=+$('gl-l').value||0,ra=+$('gl-r').value||0,n=Math.max(1,Math.round(+$('gl-n').value||1)),val=g*rate('gold',+$('gl-p').value),max=val*ltv/100,a=Math.min(+$('gl-a').value||max,max),r=ra/1200,emi=r?a*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1):a/n;
+  $('gl-out').innerHTML=lrow('Value of your gold',inr(val))+lrow(`Maximum loan (${ltv}% LTV)`,inr(max))+lrow('Loan amount used',inr(a))+lrow('Monthly EMI',inr(emi))+lrow('Total interest',inr(emi*n-a))+'<hr style="border-color:var(--bd);margin:6px 0">'+lrow('Total to repay',inr(emi*n),1)}
+function glob(){const c=$('gc-c').value,t=$('gc-t');if(!SPOT.gold||!FXR[c]){t.innerHTML='<tr><td>International prices appear when the live price feed is reachable.</td></tr>';return}
+  const sym={INR:'₹',USD:'$',AED:'AED ',EUR:'€',GBP:'£',SGD:'S$'}[c],f=x=>sym+x.toLocaleString('en-IN',{maximumFractionDigits:2});
+  t.innerHTML='<tr><th>Metal</th><th>Per troy oz</th><th>Per gram</th></tr>'+K.map(k=>{const o=SPOT[k]*FXR[c];return `<tr><td>${NAME[k]}</td><td>${f(o)}</td><td>${f(o/31.1035)}</td></tr>`}).join('')}
+function miniBar(){const f=PUR[mt][gp][1],u=mt=='silver'?1000:10,p=rate(mt,f)*u;$('mini-t').innerHTML=`<b>${NAME[mt]}</b> · ${city}: <b>${inr(p)}</b>/${u==1000?'kg':'10g'} ${pc(pct(mt))}`;
+  if(!location.hash.startsWith('#/'))document.title=`${NAME[mt]} Rate Today ${inr(p)} in ${city} | MetalRates.in`}
+addEventListener('scroll',()=>$('mini').classList.toggle('show',scrollY>420&&!location.hash.startsWith('#/')),{passive:true});$('mini-top').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+function rateCard(){const c=document.createElement('canvas');c.width=1080;c.height=1350;const x=c.getContext('2d'),g=x.createLinearGradient(0,0,1080,1350);g.addColorStop(0,'#0f2a5c');g.addColorStop(1,'#7c3aed');x.fillStyle=g;x.fillRect(0,0,1080,1350);
+  x.fillStyle='#fff';x.font='bold 60px Arial';x.fillText('Gold & Silver Rates Today',60,120);x.font='34px Arial';x.fillStyle='#fde68a';x.fillText(`${city} · ${K.some(isLive)?'Live '+stamp.toLocaleTimeString('en-IN'):asOf()}`,60,175);
+  [['Gold 24K / 10g',rate('gold')*10,'gold'],['Gold 22K / 10g',rate('gold',22/24)*10,'gold'],['Silver / 1 kg',rate('silver')*1000,'silver'],['Platinum / 10g',rate('platinum',.95)*10,'platinum']].forEach(([l,v,k],i)=>{const y=250+i*215,p=pct(k);
+    x.fillStyle='rgba(255,255,255,.12)';x.beginPath();x.roundRect(60,y,960,185,28);x.fill();x.fillStyle='#e5e7eb';x.font='34px Arial';x.fillText(l,100,y+60);
+    x.fillStyle='#fff';x.font='bold 72px Arial';x.fillText(inr(v),100,y+148);x.fillStyle=p>=0?'#4ade80':'#f87171';x.font='bold 36px Arial';x.textAlign='right';x.fillText((p>=0?'▲ ':'▼ ')+Math.abs(p).toFixed(2)+'%',980,y+148);x.textAlign='left'});
+  x.fillStyle='#cbd5e1';x.font='26px Arial';x.fillText('Indicative rates. Not financial advice. Confirm with your jeweller.',60,1255);x.fillStyle='#fde68a';x.font='bold 30px Arial';x.fillText('MetalRates.in',60,1305);
+  c.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`rates-${city}-${DATA.date}.png`;a.click()})}
+$('rc').onclick=rateCard;$('jb-print').onclick=()=>print();
+const CHK=['Check the BIS hallmark and the 6-character HUID on each piece','Ask for a bill that lists weight, purity, rate, making charge and GST separately','Compare the day\'s rate with this page and at least two local jewellers','Ask for stone weight to be listed separately from gold weight','Ask about buy-back and exchange terms in writing','Keep the bill and hallmark details safe'];
+function chk(){let d={};try{d=JSON.parse(localStorage.getItem('chk')||'{}')}catch(e){}
+  $('chk').innerHTML=CHK.map((t,i)=>`<label class="flex gap-2 items-start"><input type="checkbox" data-c="${i}" ${d[i]?'checked':''} class="w-5 h-5 mt-0.5"><span>${t}</span></label>`).join('');
+  $('chk').onchange=e=>{d[e.target.dataset.c]=e.target.checked;try{localStorage.setItem('chk',JSON.stringify(d))}catch(x){}}}
+function initPro(){const cs=Object.keys(CITY).map(c=>`<option>${c}</option>`).join('');['c1','c2','c3'].forEach((i,n)=>{$(i).innerHTML=cs;$(i).value=['Delhi','Mumbai','Chennai'][n]});
+  fillPur('jb-p','gold','22K');fillPur('sv-p','gold','22K');fillPur('gl-p','gold','22K');
+  $('jb-m').onchange=()=>{fillPur('jb-p',$('jb-m').value,'22K');bill()};$('sv-m').onchange=()=>{fillPur('sv-p',$('sv-m').value,'22K');sell()};
+  ['c1','c2','c3'].forEach(i=>$(i).addEventListener('change',cmp));
+  [['jb-',bill,['m','p','w','mt','mv','wp','st','g']],['sv-',sell,['m','p','w','d']],['gl-',loan,['w','p','l','r','n','a']]].forEach(([p,f,ids])=>ids.forEach(i=>{$(p+i).addEventListener('input',f);$(p+i).addEventListener('change',f)}));
+  $('gc-c').onchange=glob;chk()}
+function pro(){cmp();bill();sell();loan();glob();miniBar()}
 /* ===== Events ===== */
 $('cs').innerHTML=Object.keys(CITY).map(c=>`<option>${c}</option>`).join('');$('cs').onchange=e=>{city=e.target.value;render()};
 document.addEventListener('click',e=>{const m=e.target.closest('[data-m]'),p=e.target.closest('[data-p]'),d=e.target.closest('[data-d]');
@@ -334,35 +450,26 @@ try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.
 $('th').onclick=()=>setTheme(isDark()?'light':'dark');paintTheme();
 matchMedia('(prefers-color-scheme:dark)').addEventListener&&matchMedia('(prefers-color-scheme:dark)').addEventListener('change',paintTheme);
 $('yr').textContent=new Date().getFullYear();
-purOpts();render();sip();cvt();alList();loadRates();setInterval(loadRates,300000);
+initPro();purOpts();render();sip();cvt();alList();window.initDone=1;pro();loadStatic().then(liveTick);setInterval(loadStatic,300000);setInterval(liveTick,60000);
 
 /* ===== Page router: #/about, #/contact, #/privacy, #/disclaimer (no server needed) ===== */
 const ROUTES={'':['pg-home','Gold Rate Today in India | 24K, 22K, 18K, Silver & Platinum Price, Alerts & Calculators','Gold, silver and platinum rate today in India with city-wise prices, alerts, calculators and trends.'],
 about:['pg-about','About Us | MetalRates.in','Learn what MetalRates.in does and how our gold, silver and platinum rates are calculated.'],
 contact:['pg-contact','Contact Us | MetalRates.in','Contact MetalRates.in with questions, feedback, corrections or business enquiries.'],
 privacy:['pg-privacy','Privacy Policy | MetalRates.in','How MetalRates.in collects, uses and protects your information.'],
+calibrate:['pg-calibrate','Calibrate | MetalRates.in','Owner tool'],
 disclaimer:['pg-disclaimer','Disclaimer | MetalRates.in','Important disclaimer about the rates, calculators, alerts and projections on MetalRates.in.']};
 function route(){const h=location.hash,r=h.startsWith('#/')?h.slice(2).replace(/\/$/,''):'',k=ROUTES[r]?r:'';
   Object.keys(ROUTES).forEach(x=>$(ROUTES[x][0]).hidden=x!==k);
   document.title=ROUTES[k][1];document.querySelector('meta[name=description]').content=ROUTES[k][2];
   document.querySelectorAll('header nav a').forEach(a=>a.classList.toggle('cur',a.getAttribute('href')=='#/'+k));
   if(!h||h.startsWith('#/'))window.scrollTo(0,0);else{const t=document.getElementById(h.slice(1));t&&t.scrollIntoView()}}
-window.addEventListener('hashchange',route);route();
+window.addEventListener('hashchange',route);route();$('cal-go').onclick=calibrate;
 /* Contact form: opens the visitor's email app (no backend needed) */
 const EMAIL='contact@yourdomain.com'; // replace with your real address
 $('ct-f').onsubmit=e=>{e.preventDefault();const n=$('ct-n').value.trim(),m=$('ct-m').value.trim(),em=$('ct-e').value.trim();
   if(!n||!m||!/^\S+@\S+\.\S+$/.test(em)){$('ct-st').textContent='Please fill in your name, a valid email and a message.';return}
   location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('['+$('ct-s').value+'] from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' <'+em+'>');
   $('ct-st').textContent='Opening your email app. If nothing opens, email us directly at '+EMAIL+'.'};
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3458536266912076"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-3458536266912076"
-     data-ad-slot="2785510584"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </body></html>
